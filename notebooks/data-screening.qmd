@@ -56,7 +56,7 @@ Scatter plot the spatial locations of events
 
 ```{python}
 #| label: fig-spatial-plot
-#| fig-cap: Locations of earthquakes on La Palma since 2017.
+#| fig-cap: Earthquakes on La Palma since 2017.
 #| fig-alt: "A scatterplot of earthquake locations plotting latitude against longitude."
 from matplotlib import colormaps
 cmap = colormaps['viridis_r']
