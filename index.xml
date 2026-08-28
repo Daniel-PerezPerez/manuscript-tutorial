@@ -23,7 +23,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>La Palma Earthquakes Mechanisms</article-title>
 </title-group>
 
 <contrib-group>
@@ -55,10 +55,35 @@ administration</role>
 
 <xref ref-type="aff" rid="aff-1">a</xref>
 </contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0000-0000-0000</contrib-id>
+<name>
+<surname>Author</surname>
+<given-names>Dummy E.</given-names>
+</name>
+<string-name>Dummy E. Author</string-name>
+
+<role>Entertaintment</role>
+<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<role>Storytelling</role>
+<xref ref-type="aff" rid="aff-2">b</xref>
+</contrib>
 </contrib-group>
 <aff id="aff-1">
 <institution-wrap>
 <institution>Curvenote</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
+<aff id="aff-2">
+<institution-wrap>
+<institution>La Palma University</institution>
 </institution-wrap>
 
 
@@ -92,7 +117,8 @@ administration</role>
 island of La Palma (Canary Islands, Spain) signaled the start of a
 volcanic crisis that still continues at the time of writing. Earthquake
 data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
+Nacional (IGN). We aimed at describing alternative methods to describe
+the probability of a new eruption considering historical data.</p>
 </abstract>
 <kwd-group kwd-group-type="author">
 <kwd>La Palma</kwd>
@@ -114,7 +140,7 @@ Nacional (IGN). …</p>
     Palma</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
   </fig>
-  <p>Based on data up to and including 1971, eruptions on La Palma
+  <p>Based on data up to and including 2021, eruptions on La Palma
   happen every 79.8 years on average.</p>
   <p>Studies of the magma systems feeding the volcano, such as Marrero
   et al.
@@ -207,7 +233,7 @@ Nacional (IGN). …</p>
   Archipelago of the Canary Islands
   (<xref alt="Figure 2" rid="fig-map">Figure 2</xref>).</p>
   <fig id="fig-spatial-plot">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
+    <caption><p>Figure 3: Earthquakes on La Palma since
     2017.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
   </fig>
@@ -250,7 +276,7 @@ Nacional (IGN). …</p>
 <sub-article article-type="notebook" id="nb-8-nb-article">
 <front-stub>
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>La Palma Earthquakes Mechanisms</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author" corresp="yes">
@@ -281,10 +307,35 @@ administration</role>
 
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
 </contrib>
+<contrib contrib-type="author">
+<contrib-id contrib-id-type="orcid">0000-0000-0000-0000</contrib-id>
+<name>
+<surname>Author</surname>
+<given-names>Dummy E.</given-names>
+</name>
+<string-name>Dummy E. Author</string-name>
+
+<role>Entertaintment</role>
+<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<role>Storytelling</role>
+<xref ref-type="aff" rid="aff-2-nb-article">b</xref>
+</contrib>
 </contrib-group>
 <aff id="aff-1-nb-article">
 <institution-wrap>
 <institution>Curvenote</institution>
+</institution-wrap>
+
+
+
+
+
+
+
+</aff>
+<aff id="aff-2-nb-article">
+<institution-wrap>
+<institution>La Palma University</institution>
 </institution-wrap>
 
 
@@ -302,14 +353,15 @@ administration</role>
 island of La Palma (Canary Islands, Spain) signaled the start of a
 volcanic crisis that still continues at the time of writing. Earthquake
 data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
+Nacional (IGN). We aimed at describing alternative methods to describe
+the probability of a new eruption considering historical data.</p>
 </abstract>
 </front-stub>
 
 <body>
 <sec id="introduction-nb-article">
   <title>1 Introduction</title>
-  <sec id="dde98bae-nb-article" specific-use="notebook-content">
+  <sec id="cell-276d0e35-nb-article" specific-use="notebook-content">
   <code language="python">import matplotlib.pyplot as plt
 import numpy as np
 eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]</code>
@@ -326,13 +378,12 @@ plt.show()</code>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-output-1.png" />
   </fig>
   </sec>
-  <sec id="cell-6f3def6d-nb-article" specific-use="notebook-content">
+  <sec id="cell-3c36294e-nb-article" specific-use="notebook-content">
   <code language="python">avg_years_between_eruptions = np.mean(np.diff(eruptions[:-1]))
-avg_years_between_eruptions</code>
-  <preformat>np.float64(79.83333333333333)</preformat>
+max_years = np.max(eruptions)</code>
   </sec>
-  <sec id="cell-6ca286db-nb-article" specific-use="notebook-content">
-  <p>Based on data up to and including 1971, eruptions on La Palma
+  <sec id="c37931aa-nb-article" specific-use="notebook-content">
+  <p>Based on data up to and including 2021, eruptions on La Palma
   happen every 79.8 years on average.</p>
   <p>Studies of the magma systems feeding the volcano, such as Marrero
   et al.
@@ -435,7 +486,7 @@ colorbar.set_label(&quot;Magnitude&quot;)
 
 plt.show()</code>
   <fig id="fig-spatial-plot-nb-article">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
+    <caption><p>Figure 3: Earthquakes on La Palma since
     2017.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-data-screening-fig-spatial-plot-output-1.png" />
   </fig>
@@ -516,15 +567,15 @@ notebook by Steve Purves</fn>
 </front-stub>
 
 <body>
-<sec id="cell-25276572-nb-1" specific-use="notebook-content">
+<sec id="cell-2081a457-nb-1" specific-use="notebook-content">
 <preformat>import pandas as pd
 import matplotlib.pyplot as plt</preformat>
 </sec>
-<sec id="cell-7f05db89-nb-1" specific-use="notebook-content">
+<sec id="cacb0673-nb-1" specific-use="notebook-content">
 <p>Import <monospace>la-palma.csv</monospace> - a clean subset of
 <ext-link ext-link-type="uri" xlink:href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><monospace>catalogoComunSV_1663233588717.csv</monospace></ext-link>:</p>
 </sec>
-<sec id="da2659e5-nb-1" specific-use="notebook-content">
+<sec id="b9b03050-nb-1" specific-use="notebook-content">
 <preformat>df = pd.read_csv('la-palma.csv')
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 df = df.sort_values(by=['DateTime'], ascending=True)
@@ -586,7 +637,7 @@ df.head()</preformat>
   </table>
 </table-wrap>
 </sec>
-<sec id="ae1253df-nb-1" specific-use="notebook-content">
+<sec id="f1660d80-nb-1" specific-use="notebook-content">
 <preformat>df.describe()</preformat>
 <table-wrap>
   <table border="1">
@@ -660,18 +711,18 @@ df.head()</preformat>
   </table>
 </table-wrap>
 </sec>
-<sec id="cell-81b4dfb2-nb-1" specific-use="notebook-content">
+<sec id="cell-51fbf163-nb-1" specific-use="notebook-content">
 <preformat>df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, figsize=(12,12), grid=&quot;on&quot;);</preformat>
 <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png" />
 </sec>
-<sec id="cell-19a1ba0d-nb-1" specific-use="notebook-content">
+<sec id="cell-9c54fab1-nb-1" specific-use="notebook-content">
 <sec id="filter-nb-1">
   <title>Filter</title>
   <p>Also some rows seem to be missing depth measurements, (see
   differences in the <bold>count</bold> for columns above) - take only
   rows with valid depths</p>
   </sec>
-  <sec id="e56a69b3-nb-1" specific-use="notebook-content">
+  <sec id="cell-0ed5769c-nb-1" specific-use="notebook-content">
   <preformat>df = df[df['Depth(km)'].notna()]
 df.describe()</preformat>
   <table-wrap>
@@ -746,7 +797,7 @@ df.describe()</preformat>
     </table>
   </table-wrap>
   </sec>
-  <sec id="cell-1368822d-nb-1" specific-use="notebook-content">
+  <sec id="cell-32164e63-nb-1" specific-use="notebook-content">
   <preformat>plt.figure(figsize=(20,6))
 plt.subplot(1,3,1)
 df[&quot;Latitude&quot;].plot.hist(bins=20, density=True)
@@ -756,7 +807,7 @@ plt.subplot(1,3,3)
 df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)</preformat>
   <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-1.png" />
   </sec>
-  <sec id="da7ad095-nb-1" specific-use="notebook-content">
+  <sec id="cell-120047e1-nb-1" specific-use="notebook-content">
 </sec>
 <sec id="spatial-plot-nb-1">
   <title>Spatial Plot</title>
@@ -764,7 +815,7 @@ df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)</preformat>
   </sec>
   <sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
   <preformat>#| label: fig-spatial-plot
-#| fig-cap: Locations of earthquakes on La Palma since 2017.
+#| fig-cap: Earthquakes on La Palma since 2017.
 #| fig-alt: A scatterplot of earthquake locations plotting latitude against longitude.
 from matplotlib import colormaps
 cmap = colormaps['viridis_r']
@@ -776,12 +827,11 @@ colorbar.set_label(&quot;Magnitude&quot;)
 
 plt.show()</preformat>
   <fig id="fig-spatial-plot-nb-1">
-    <caption><p>Locations of earthquakes on La Palma since
-    2017.</p></caption>
+    <caption><p>Earthquakes on La Palma since 2017.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/fig-spatial-plot-output-1.png" />
   </fig>
   </sec>
-  <sec id="cell-22ac5ce7-nb-1" specific-use="notebook-content">
+  <sec id="cell-9581d96a-nb-1" specific-use="notebook-content">
   <sec id="timeline-plot-nb-1">
     <title>Timeline Plot</title>
     <p>Scatter plot the event time series and look for any quantization
